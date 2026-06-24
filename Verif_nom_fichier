@@ -1,0 +1,5 @@
+from pathlib import Path
+data_root = Path(r'C:\MRIData\Vida-XT\Repeatability\Splitted_data')
+subjects = sorted([d for d in data_root.iterdir() if d.is_dir()])
+for idx, s in enumerate(subjects, start=1):
+    print(f'pancreas_{idx:03d}  <-  {s.name}')
